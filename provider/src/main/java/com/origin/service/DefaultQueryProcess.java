@@ -1,4 +1,8 @@
-package com.origin;
+package com.origin.service;
+
+import com.origin.QueryInfo;
+import com.origin.QueryProcess;
+import org.apache.dubbo.config.annotation.Service;
 
 /**
  * _ooOoo_
@@ -19,10 +23,14 @@ package com.origin;
  * \ \ `-. \_ __\ /__ _/ .-` / /
  * ======`-.____`-.___\_____/___.-`____.-'======
  *
- * @author: shuangfeng_li 2021/12/28 15:35
+ * @author: shuangfeng_li 2021/12/28 16:37
  */
-public interface QueryProcess {
+//@Service(version = "default" )
+public class DefaultQueryProcess
+        implements QueryProcess {
 
-    QueryInfo doQuery(String userId);
+    public QueryInfo doQuery(String userId) {
+        return new QueryInfo(userId, "xmg");
+    }
 
 }

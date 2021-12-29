@@ -1,5 +1,8 @@
 package com.origin;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * _ooOoo_
  * o8888888o
@@ -19,10 +22,11 @@ package com.origin;
  * \ \ `-. \_ __\ /__ _/ .-` / /
  * ======`-.____`-.___\_____/___.-`____.-'======
  *
- * @author: shuangfeng_li 2021/12/28 15:35
+ * @author: shuangfeng_li 2021/12/28 16:35
  */
-public interface QueryProcess {
-
-    QueryInfo doQuery(String userId);
-
+@SpringBootApplication
+public class ConsumerApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ConsumerApplication.class, args);
+    }
 }

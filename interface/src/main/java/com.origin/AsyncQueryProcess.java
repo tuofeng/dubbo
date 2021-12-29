@@ -1,5 +1,7 @@
 package com.origin;
 
+import java.util.concurrent.CompletableFuture;
+
 /**
  * _ooOoo_
  * o8888888o
@@ -21,8 +23,9 @@ package com.origin;
  *
  * @author: shuangfeng_li 2021/12/28 15:35
  */
-public interface QueryProcess {
+public interface AsyncQueryProcess {
 
-    QueryInfo doQuery(String userId);
+    // 异步回调
+    CompletableFuture<QueryInfo> doQuery(String userId);
 
 }

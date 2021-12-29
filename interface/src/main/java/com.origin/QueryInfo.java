@@ -1,4 +1,6 @@
-package java.com.origin;
+package com.origin;
+
+import java.io.Serializable;
 
 /**
  * _ooOoo_
@@ -21,9 +23,26 @@ package java.com.origin;
  *
  * @author: shuangfeng_li 2021/12/28 15:35
  */
-public class QueryInfo {
+public class QueryInfo
+    implements Serializable {
+    public QueryInfo() {
+    }
 
+    public QueryInfo(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    private String id;
     private String name;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -31,5 +50,13 @@ public class QueryInfo {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "QueryInfo{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

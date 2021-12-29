@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: dub-consumer
+
+server:
+  port: 9902
+dubbo:
+  registry:
+    address: zookeeper://124.71.79.139:2181

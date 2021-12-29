@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.origin</groupId>
-            <artifactId>parent</artifactId>
+            <artifactId>interface</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
