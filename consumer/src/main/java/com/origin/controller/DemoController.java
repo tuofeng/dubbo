@@ -47,6 +47,9 @@ public class DemoController {
     @Autowired
     private Stub stub;
 
+    @Autowired
+    private Async async;
+
     @RequestMapping("/versionQuery")
     public String defaultQuery(@RequestParam("id") String userId) {
         return version.doQuery(userId);
@@ -78,6 +81,11 @@ public class DemoController {
             return queryInfo.toString();
         }
         return "null";
+    }
+
+    @RequestMapping("/asyncQuery")
+    public String asyncQuery(@RequestParam("id") String userId) {
+        return async.doQuery(userId);
     }
 
 }

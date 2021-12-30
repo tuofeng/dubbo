@@ -1,6 +1,7 @@
-package com.origin.service;
+package com.origin.service.call;
 
 import com.origin.AsyncQueryProcess;
+import com.origin.CallQueryProcess;
 import com.origin.QueryInfo;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Component;
@@ -30,22 +31,13 @@ import java.util.function.BiConsumer;
  * @author: shuangfeng_li 2021/12/29 14:51
  */
 @Component
-public class Async {
+public class CallBack {
 
-
-    @Reference(version = "async")
-    private AsyncQueryProcess asyncQueryProcess;
+    @Reference(version = "callback")
+    private CallQueryProcess callQueryProcess;
 
     public String doQuery(String userId) {
-        CompletableFuture<QueryInfo> completableFuture = asyncQueryProcess.doQuery(userId);
-        completableFuture.whenComplete(new BiConsumer<QueryInfo, Throwable>() {
-            @Override
-            public void accept(QueryInfo queryInfo, Throwable throwable) {
-                System.out.println("收到异步回调结果");
-                System.out.println(queryInfo.toString());
-            }
-        });
-        return "ok";
+        return callQueryProcess.doQuery(userId , new MyCallListener()).toString();
     }
 
 }

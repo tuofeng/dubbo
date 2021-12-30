@@ -4,6 +4,7 @@ import com.origin.QueryInfo;
 import org.apache.dubbo.config.annotation.Service;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Supplier;
 
 /**
  * _ooOoo_
@@ -31,11 +32,14 @@ public class AsyncQueryProcess
         implements com.origin.AsyncQueryProcess {
 
     @Override
-    public CompletableFuture<QueryInfo> doQuery(String userId) {
+    public CompletableFuture<QueryInfo> doQuery(final String userId) {
         System.out.println("执行了异步服务");
 
-        return CompletableFuture.supplyAsync(() -> {
-            return new QueryInfo(userId, "async xmg");
+        return CompletableFuture.supplyAsync(new Supplier<QueryInfo>() {
+            @Override
+            public QueryInfo get() {
+                return new QueryInfo(userId, "async xmg");
+            }
         });
     }
 

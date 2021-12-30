@@ -25,7 +25,7 @@ import java.util.concurrent.CompletableFuture;
  */
 public interface AsyncQueryProcess {
 
-    // 异步回调
+    // 异步调用
     CompletableFuture<QueryInfo> doQuery(String userId);
 
 }
