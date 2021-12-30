@@ -18,7 +18,7 @@ public class CallBackQueryProcess
     @Override
     public QueryInfo doQuery(String userId , CallListener callListener) {
 
-        //回调consumer
+        //回调consumer 11
         callListener.call(userId);
 
         return new QueryInfo(userId , "callback xmg");
