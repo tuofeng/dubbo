@@ -7,3 +7,5 @@ server:
 dubbo:
   registry:
     address: zookeeper://124.71.79.139:2181
+  consumer:
+    check: false #启动时检查
