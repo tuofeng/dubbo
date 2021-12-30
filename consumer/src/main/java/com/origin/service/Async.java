@@ -33,7 +33,8 @@ import java.util.function.BiConsumer;
 public class Async {
 
 
-    @Reference(version = "async")
+    //check 启动时检查
+    @Reference(version = "async", check=false)
     private AsyncQueryProcess asyncQueryProcess;
 
     public String doQuery(String userId) {
