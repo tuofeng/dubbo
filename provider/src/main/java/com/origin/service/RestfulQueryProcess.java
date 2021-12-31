@@ -34,8 +34,8 @@ import javax.ws.rs.Produces;
  *
  * @author: shuangfeng_li 2021/12/28 16:37
  */
-@Path("test-rest")
-@Service(protocol = "prot3")
+//@Path("test-rest")
+//@Service(protocol = "prot3")
 public class RestfulQueryProcess
         implements QueryProcess {
 

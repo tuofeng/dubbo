@@ -25,7 +25,7 @@ import org.apache.dubbo.config.annotation.Service;
  *
  * @author: shuangfeng_li 2021/12/28 16:37
  */
-//@Service(version = "timeOut" , timeout = 3000)
+@Service(version = "timeOut" , timeout = 3000)
 public class TimeOutQueryProcess
         implements QueryProcess {
 

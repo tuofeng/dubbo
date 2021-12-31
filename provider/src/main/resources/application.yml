@@ -15,15 +15,15 @@ dubbo:
     prot1:
       name: dubbo
       port: 30880
-    prot2:
-      name: http
-      port: 30882
-    prot3:
-      id: rest
-      name: rest
-      port: 30083
+#    prot2:
+#      name: http
+#      port: 30882
+#    prot3:
+#      id: rest
+#      name: rest
+#      port: 30083
   config-center:
-    timeout: 10000
+    timeout: 30000
 
 #  dubbo://172.21.22.85:30880/com.origin.QueryProcess?anyhost=true&application=dub-provider&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=com.origin.QueryProcess&methods=doQuery&pid=30316&release=2.7.5&revision=timeOut&side=provider&timeout=3000&timestamp=1640746365256&version=timeOut
 #  http://172.21.22.85:30882/com.origin.QueryProcess?anyhost=true&application=dub-provider&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=com.origin.QueryProcess&methods=doQuery&pid=30316&release=2.7.5&revision=timeOut&side=provider&timeout=3000&timestamp=1640746365845&version=timeOut
